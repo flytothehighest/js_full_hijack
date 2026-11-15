@@ -27,14 +27,14 @@ var _priv_hack = function(qobjs,objname){
         var code = `
         let ph = ${objname}.prototype.${objame};
         ${objname}.prototype.${objame} = function(...args){
-         window.execCode.push('${objname}.prototype.${objame}('+args+')')
+         window.execCode.push([this,'${objname}.prototype.${objame}('+args+')'])
          return ph.apply(this,args)
         }
         `
         try{
         new Function(code)()
         }catch(e){
-
+// As for properties,we cannot monitor so a error was thrown.
         }
      })
 }
