@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Canvas Hijacker
+// @name         Canvas 2D Hijacker
 // @namespace    http://tampermonkey.net/
 // @version      2026-11-15
 // @description  try to take over the world!
@@ -38,6 +38,7 @@ var _priv_hack = function(qobjs,objname){
         }
      })
 }
+    //Change parameters here.e.g. hack(['EventTarget'])
 hack()
    
 })();
